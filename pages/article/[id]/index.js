@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import {server} from '../../../config/index'
+import Meta from '../../../components/Meta'
 
 const article = ({article}) => {
   return (
     <>
+      <Meta title={article.title} description={article.excerpt} />
       <h1>{article.title}</h1>
       <p>{article.body}</p>
       <br />
